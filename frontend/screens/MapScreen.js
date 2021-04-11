@@ -10,7 +10,7 @@ import * as Permissions from 'expo-permissions';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import socketIOClient from "socket.io-client";
 
-var socket = socketIOClient("http://172.17.1.144:3000")
+var socket = socketIOClient("IP")
 
 export default function MapScreen() {
 

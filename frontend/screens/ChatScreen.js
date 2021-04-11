@@ -8,7 +8,7 @@ import socketIOClient from "socket.io-client";
 import {connect} from 'react-redux';
 
 // Pensez à changer l'adresse ci-dessous avec votre IP locale !
-var socket = socketIOClient("http://172.17.1.144:3000");
+var socket = socketIOClient("IP");
 
 function ChatScreen(props) {
   
@@ -22,7 +22,7 @@ function ChatScreen(props) {
   }, [listMessage]);
 
   var listMessageItem = listMessage.map((messageData, i)=>{
-    
+      
     var msg = messageData.message.replace(/:\)/g, '\u263A');
     msg = msg.replace(/:\(/g, '\u2639');
     msg = msg.replace(/:p/g, '\uD83D\uDE1B');
